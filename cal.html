@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        .div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 35vh;
+            padding: 0px;
+        }
+        .inp{
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            margin-top: 20px;
+        }
+        input{
+            width: 205px;
+            height: 60px;
+        }
+        button{
+            font-size: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: #f4f4f4;
+        }
+        button:hover{
+            background-color: gray;
+            cursor: pointer;
+        }
+        #run{
+            border: solid black;
+            border-width: 5px;
+            margin-left: 41.5%;
+            margin-right: 41.5%;
+
+        }
+        #chintu{
+            text-align: right;
+            font-size: 30px;
+        }
+
+    </style>
+</head>
+<body id="run">
+    <div>
+    <div class="inp">
+        <input type="text" name="" readonly id="chintu"><br>
+    </div>
+    <div class="div">
+    <table>
+        <tr>
+            <td><button onclick="thanigai(this)">7</button></td>
+            <td><button onclick="thanigai(this)">8</button></td>
+            <td><button onclick="thanigai(this)">9</button></td>
+            <td><button onclick="thanigai(this)">+</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="thanigai(this)">4</button></td>
+            <td><button onclick="thanigai(this)">5</button></td>
+            <td><button onclick="thanigai(this)">6</button></td>
+            <td><button onclick="thanigai(this)">-</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="thanigai(this)">3</button></td>
+            <td><button onclick="thanigai(this)">2</button></td>
+            <td><button onclick="thanigai(this)">1</button></td>
+            <td><button onclick="thanigai(this)">*</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="guna()">ac</button></td>
+            <td><button onclick="thanigai(this)">0</button></td>
+            <td><button onclick="thanigai(this)">/</button></td>
+            <td><button onclick="calculate()">=</button></td>
+        </tr>
+    </table>
+    </div>
+</div>
+    <script>
+        function thanigai(button)
+        {
+            const input = document.getElementById('chintu')
+            input.value +=button.textContent
+        }
+        function guna(button) {
+            // body...
+            const input = document.getElementById('chintu')
+            input.value  = ''
+
+        }
+        function calculate() {
+            try {
+                chintu.value = eval(chintu.value);
+            } catch (e) {
+                alert('Invalid expression');
+                clearDisplay();
+            }
+        }
+    
+    </script>
+</body>
+</html>
